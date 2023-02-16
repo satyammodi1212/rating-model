@@ -1,0 +1,125 @@
+@import url('https://font.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightcyan;
+    color: darkgreen;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    background: rgba(255,255,255,.3);
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 85%;
+    max-width: min-content;
+    text-align: center;
+    font-size: 20px;
+}
+
+.heading{
+    margin: 5px;
+    font-size: 30px;
+
+}
+
+.ratings-container {
+    display: flex;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .ratings-container {
+        flex-direction: column;
+    }
+}
+
+.rating{
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 5px;
+    transition: 0.5;
+}
+.rating:hover,
+.rating.active{
+    background-color: darkseagreen;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: aliceblue;
+    transition: all 300ms ease;
+}
+
+.rating-stars{
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+}
+.rating-stars input{
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.rating-stars input::before{
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 20px;
+    left: 2px;
+    color: #030b0f;
+    transition: 0.5s;
+}
+.rating-stars input:nth-child(2n + 1):before{
+    right: 2px;
+    left: initial;
+}
+.rating-stars input:hover ~ input::before,
+.rating-stars input:hover::before,
+.rating-stars input:checked ~ input::before,
+.rating-stars input:checked::before{
+    color: #1f9cff;
+}
+.btn{
+    background-color: darkcyan;
+    color: aliceblue;
+    border: 0;
+    margin: 10px;
+    border-radius: 4px;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: all 300ms ease;
+}
+.btn:active{
+    transform: scale(0.96);
+}
+#search{
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    background-color: rgb(236, 222, 204);
+    box-shadow:  0 5px 10px rgb(3, 3, 3);
+    
+}
+.rating img{
+    width: 120px;
+    height: 100px;
+    border-radius: 5px;
+    /* object-fit: cover; */
+    background-size: cover;
+} 
