@@ -116,6 +116,9 @@ body{
     box-shadow:  0 5px 10px rgb(3, 3, 3);
     
 }
+/* #button{
+    display: none;
+} */
 .rating img{
     width: 120px;
     height: 100px;

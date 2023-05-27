@@ -7,6 +7,7 @@ let model = "";
 let ratingSl = document.querySelectorAll(".rating-stars");
 let searchEl  = document.getElementById("search");
 let stars = document.querySelector('.rating.active .rating-stars');
+// let butEl = document.getElementById("button");
 
 ratingEls.forEach((ratingEl) => {
     ratingEl.addEventListener("click", (event) => {
@@ -18,6 +19,7 @@ ratingEls.forEach((ratingEl) => {
         event.target.parentNode.classList.add("active");
         stars = document.querySelector('.rating.active .rating-stars');
         console.log(stars);
+
     });
     // ratingSl.addEventListener("click",(event))
 });
@@ -36,9 +38,10 @@ btnEl.addEventListener("click", () => {
         <br>
         <strong>${ratingSl}</strong>
         <p>Dear ${searchEl.value} Your Girlfriend Request is Submite</p>
-        
+        <input type = "Submit">       
         `;
     }
+  
 })
 
 
