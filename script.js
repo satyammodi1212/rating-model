@@ -38,9 +38,10 @@ btnEl.addEventListener("click", () => {
         <br>
         <strong>${ratingSl}</strong>
         <p>Dear ${searchEl.value} Your Girlfriend Request is Submite</p>
-        <input type = "Submit">       
+        <button id="btne" type="submit" onclick="return locationreload();" class="btn btn-success">Play Again</button>     
         `;
     }
+    
   
 })
 
@@ -52,3 +53,6 @@ function removeActive() {
     });
 }
 
+function locationreload() {
+    location.reload();
+}
