@@ -37,6 +37,7 @@ btnEl.addEventListener("click", () => {
         <br>
         <br>
         <strong>${ratingSl}</strong>
+        <p>Contact:+91 9998674523</p>
         <p>Dear ${searchEl.value} Your Girlfriend Request is Submite</p>
         <button id="btne" type="submit" onclick="return locationreload();" class="btn btn-success">Play Again</button>     
         `;
